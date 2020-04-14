@@ -16,7 +16,11 @@
         </q-item-section>
 
         <q-item-section>
-          <q-item-label>{{task.name}}</q-item-label>
+          <q-item-label
+            :class="{ 'text-strikethrough' : task.completed } "
+            >
+              {{task.name}}
+          </q-item-label>
         </q-item-section>
 
         <q-item-section side>

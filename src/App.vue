@@ -9,3 +9,9 @@ export default {
   name: 'App'
 }
 </script>
+
+<style type="text/css">
+  .text-strikethrough {
+    text-decoration: line-through;
+  }
+</style>
