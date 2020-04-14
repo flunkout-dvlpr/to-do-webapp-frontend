@@ -1,16 +1,13 @@
 <template>
   <q-page padding>
-  <ul>
-    <task
-    v-for='(task, index) in tasks'
-    :key="task.id"
-    :task='task'
-    :index='index'
-    :deleteTaks= 'deleteTask'
-    >
-    </task>
-
-  </ul>
+    <ul>
+      <task v-for="(task, index) in tasks"
+      :key="task.id"
+      :task="task"
+      :index="index"
+      :deleteTask="deleteTask"
+      ></task>
+    </ul>
   </q-page>
 </template>
 
@@ -22,21 +19,24 @@ export default {
       tasks: [
         {
           id: 1,
-          name: 'Learn Vue.js',
-          dueDate: '04-10-2020',
-          dueTime: '12:00'
+          name: 'learn vuejs',
+          dueDate: '2020/04/18',
+          dueTime: '21:00'
+
         },
         {
           id: 2,
-          name: 'Learn Quasar Framework',
-          dueDate: '04-12-2020',
-          dueTime: '12:00'
+          name: 'learn quasar',
+          dueDate: '2020/04/19',
+          dueTime: '21:00'
+
         },
         {
           id: 3,
-          name: 'Learn AWS Cognito',
-          dueDate: '04-14-2020',
-          dueTime: '12:00'
+          name: 'learn js',
+          dueDate: '2020/04/20',
+          dueTime: '21:00'
+
         }
       ]
     }

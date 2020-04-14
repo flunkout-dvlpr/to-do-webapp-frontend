@@ -1,13 +1,17 @@
 <template>
   <li>
-    <div>{{ task.name }}</div>
-    <small>{{ task.dueDate }} @ {{ task.dueTime}}</small>
-    <button @click='deleteTask(index)'>x</button>
+    <div>{{task.name}} {{index}}</div>
+    <small>{{task.dueDate}} @ {{task.dueTime}}</small>
+    <button @click="deleteTask(index)">X</button>
   </li>
 </template>
 
 <script>
 export default {
-  props: ['task', 'index']
+  props: {
+    task: Object,
+    index: Number,
+    deleteTask: Function
+  }
 }
 </script>
