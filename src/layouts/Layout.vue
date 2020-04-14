@@ -24,6 +24,7 @@
       bordered
       content-class="bg-grey-1"
       :breakpoint="767"
+      :width="200"
     >
       <q-list>
         <q-item-label
