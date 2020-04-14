@@ -65,7 +65,7 @@
 
 ## Vuex - State-management 
 
-###What Is It?
+### What Is It?
 
 * Vuex is a State management pattern + library for Vue.js
 * Store data in one centralized place 
@@ -73,7 +73,7 @@
 * Components can change data in the store by triggering action and mutations that are contained in the store
 * When data is changed in the store all components using that data are updated 
 
-###Todo app breakdown 
+### Todo app breakdown 
 
 * Todo Page (Vuex Store)
 	* Tasks Todo (Component)
@@ -102,8 +102,13 @@
 	* Getters
 		* Methods that get the data from the state and can then be used by the components  
 		* Data can be manipulated 
-		
 	
+### Vuex Tasks Store Setup
+* Add tasks data to store object 
+* Create getter arrow function to get/return tasks data
+* Remove tasks data object from todo page and add getter using computed property 
+* Using mapGetters from vuex to map directly to the tasks getter function
+
 
 
 

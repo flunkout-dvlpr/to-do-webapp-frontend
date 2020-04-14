@@ -51,35 +51,15 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-  data () {
-    return {
-      tasks: [
-        {
-          id: 1,
-          name: 'Learn Vue.js',
-          completed: false,
-          dueDate: '2020/04/20',
-          dueTime: '00:00'
-        },
-        {
-          id: 2,
-          name: 'Learn Quasar FrameWork',
-          completed: true,
-          dueDate: '2020/04/31',
-          dueTime: '12:00'
-        },
-        {
-          id: 3,
-          name: 'Learn JavaScript',
-          completed: false,
-          dueDate: '2020/05/10',
-          dueTime: '12:00'
-        }
-      ]
-    }
+  computed: {
+    // tasks () {
+    //   return this.$store.getters['tasks/tasks']
+    // }
+    // Using mapGetter is a cleaner alternative than using/executing function
+    ...mapGetters('tasks', ['tasks'])
   }
-
 }
 </script>
 
