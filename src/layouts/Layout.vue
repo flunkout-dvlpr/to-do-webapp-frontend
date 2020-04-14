@@ -1,32 +1,29 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="hHh lpR fFf">
     <q-header elevated>
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="leftDrawerOpen = !leftDrawerOpen"
-        />
-
-        <q-toolbar-title>
+        <q-toolbar-title class="absolute-center">
           HoneyDo App
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
     <q-footer>
-      Footer
+      <q-tabs>
+        <q-route-tab
+          v-for="link in navigationLinks"
+          :key="link.title"
+          :to="link.path"
+          :icon="link.icon"
+          :label="link.caption"/>
+      </q-tabs>
     </q-footer>
     <q-drawer
       v-model="leftDrawerOpen"
       show-if-above
       bordered
       content-class="bg-grey-1"
+      :breakpoint="767"
     >
       <q-list>
         <q-item-label
@@ -80,3 +77,11 @@ export default {
   }
 }
 </script>
+
+<style type="text/css">
+  @media screen and (min-width: 768px) {
+    .q-footer {
+      display: none;
+    }
+  }
+</style>
