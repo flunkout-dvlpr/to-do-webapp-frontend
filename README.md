@@ -64,7 +64,9 @@
 	* Edit Quasar theme using quasar theme builder 
 
 ## Vuex - State-management 
+
 ###What Is It?
+
 * Vuex is a State management pattern + library for Vue.js
 * Store data in one centralized place 
 * Components can access the data from the store using getters 
@@ -72,6 +74,7 @@
 * When data is changed in the store all components using that data are updated 
 
 ###Todo app breakdown 
+
 * Todo Page (Vuex Store)
 	* Tasks Todo (Component)
 		*  Task (Component)
@@ -83,7 +86,23 @@
 			* Delete (Component)
 * Using Vuex store allows components to retrieve data using getters and when the data gets modified any components using that data get updated with the change
 * This is a much better approach than using events which can get hard to manage when several components are involved
-* 
+
+### Store.js
+
+* Store is composed of 4 sections/objects
+	* State
+		* Where all the data is stored
+	* Mutations 
+		* Methods that manipulate the state instantly 
+		* Cannot be asynchronous 
+	* Actions
+		* Methods that manipulate the state 
+		* Methods can be asynchronous
+		* Action -> Server -> Data -> Mutation -> Data To State
+	* Getters
+		* Methods that get the data from the state and can then be used by the components  
+		* Data can be manipulated 
+		
 	
 
 
